@@ -1,0 +1,172 @@
+/* ------ LAYOUT ------- */
+
+article {
+    display: flow-root;
+}
+
+article * {
+    display: inline;
+}
+
+article :is(p, blockquote, h1, h2, h3, h4, h5, h6, ul, ol, pre, hr) {
+    display: flow-root;
+}
+
+article li {
+    display: list-item;
+}
+
+/* tables */
+
+article table {
+    display: table;
+}
+
+article thead {
+    display: table-header-group;
+}
+
+article tbody {
+    display: table-row-group;
+}
+
+article tfoot {
+    display: table-footer-group;
+}
+
+article col {
+    display: table-column;
+}
+
+article colgroup {
+    display: table-column-group;
+}
+
+article tr {
+    display: table-row;
+}
+
+article td, th {
+    display: table-cell;
+}
+
+/* ------ STYLES ------- */
+
+article p {
+    margin-block: 1em;
+}
+
+article blockquote {
+    margin-block: 1em;
+    margin-inline: 1em;
+    padding-inline-start: 1em;
+}
+
+article q:before {
+    content: open-quote;
+}
+
+article q:after {
+    content: close-quote;
+}
+
+article hr {
+    margin-inline: auto;
+    margin-block: 0.5em;
+    border: 1px solid rgb(128, 128, 128);
+    overflow: hidden;
+    unicode-bidi: isolate;
+}
+
+/* heading elements */
+
+article h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-block: 1em;
+}
+
+article h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-block: 1.1em;
+}
+
+article h3 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-block: 1.2em;
+}
+
+article h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-block: 1.3em;
+}
+
+article h5 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-block: 1.4em;
+}
+
+article h6 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-block: 1.5em;
+}
+
+/* lists */
+
+article ul {
+    list-style-type: disc;
+    padding-inline-start: 1em;
+    margin-block: 1em;
+}
+
+article ol {
+    list-style-type: decimal;
+    padding-inline-start: 1em;
+    margin-block: 1em;
+}
+
+li>ol, li>ul {
+    margin-block: 0;
+}
+
+/* formatting elements */
+
+article strong {
+    font-weight: bold;
+}
+
+article em {
+    font-style: italic;
+}
+
+article code {
+    font-family: monospace;
+}
+
+article pre {
+    font-family: monospace;
+    white-space: pre;
+}
+
+article del {
+    text-decoration: line-through;
+}
+
+article ins {
+    text-decoration: underline;
+}
+
+/* tables */
+
+article table {
+    border-collapse: separate;
+}
+
+article th {
+    font-weight: bold;
+}
