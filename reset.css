@@ -1,0 +1,48 @@
+/* resets any previous style, e.g. from user or user agent style sheet
+   beware: also resets styling properties of SVG elements defined as presentational attributes,
+   because they behave as if they were defined at the top of the author style sheet
+   with specificity 0, and therefore the `all` shorthand overrules them.
+   Need to style SVG elements instead in CSS, e.g. using inline styles.
+*/
+
+*, *::before, *::after {
+    all: unset;
+}
+
+/* hide head */
+
+head, meta, title, link, style, script {
+    display: none;
+}
+
+/* enable focus outline for accessibility */
+
+:focus-visible {
+    outline-color: var(--focus-outline-color, rgb(0, 119, 204));
+    outline-width: var(--focus-outline-width, 1px);
+    outline-style: auto;
+    outline-offset: var(--focus-outline-offset, 0);
+}
+
+/* fix sizing box and default layout */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    display: flex;
+}
+
+/* make root element size of viewport */
+
+html {
+    block-size: 100%;
+    /* already default in Flex Layout */
+    /* inline-size: 100%; */
+}
+
+/* disable cross axis stretch on first child of root element,
+   such that following children don't stretch over full viewport
+*/
+
+body {
+    align-self: start;
+}
